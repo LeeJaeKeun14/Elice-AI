@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <style>
+            div{border:10px solid red;}
+            #container{
+                border-color: skyblue;
+                display: grid;
+                grid-template-columns: 100px 2fr 1fr;
+            }
+            #container div{
+                border-color: darkblue;
+            }
+        </style>
+    </head>
+    <body>
+        <div>TOP</div>
+        <div id="container">
+            <div>LEFT</div>
+            <div>CENTER</div>
+            <div>RIGHT</div>
+        </div>
+        <div>BOTTOM</div>
+    </body>
+</html>

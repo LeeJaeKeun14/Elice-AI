@@ -1,0 +1,24 @@
+<p><input type="text" placeholder="title"></p>
+<p><textarea placeholder="body"></textarea></p>
+<p><input type="submit"></p>
+
+<!-- 
+<form action="https://www.google.com/search">
+    <p><input type="text" placeholder="title"></p>
+</form>
+-->
+<form onsubmit="
+    event.preventDefault();
+    var title = event.target.title.value;
+    var body = event.target.body.value;
+">
+    <p>
+        <input type="text" name="title" placeholder="title">
+    </p>
+    <p>
+        <textarea name="body" placeholder="body"></textarea>
+    </p>
+    <p>
+        <input type="submit">
+    </p>
+</form>

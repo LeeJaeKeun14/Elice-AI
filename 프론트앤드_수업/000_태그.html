@@ -1,0 +1,81 @@
+ㅋ<!DOCTYPE html>  <!-- HTML5라는 신조어를 사용한다는 선언 -->
+<html> <!-- 문서의 시작과 끝 -->
+<head> <!-- 웹사이트의 요약정보를 담는 영역, 노출 X -->
+    <meta charset="UTF-8"> <!-- 모든 문자를 깨짐없이 표시하겠다는 의미 -->
+    <title>Document</title> <!-- 웹사이트 탭에 나타나는 제목 -->
+
+    <link rel="stylesheet" href=""> <!-- External style sheet. href : css경로 설정, rel : 파일의 정보, 내용 입력-->
+    <style> /* Internal style sheet. css코드를 사용한 스타일 코드  */
+        /* */
+        /* 선택자 : Type, class, id */
+        /* css selecter*/
+        header {color:red;} /* 부모 */
+        header h2{color: blue}  /* header부모의 자식 h2 설정 */
+        header h2.number1{color: blue} /*header부모의 자식 h2에서 클래스가 .number1 인것들 설정 */
+
+        /* 순서의 캐스케이딩*/
+        p{color:red;}
+        p{color:blue;}
+        /* 동일한 설정시 가장 마지막 설정한 내용을 따른다 p는 파랑*/
+        
+        /* 디테일에 의한 캐스케이딩*/
+        p{color:red;}
+        header p{color: blue}
+        /* 더 구체적으로 작성됭 선택자의 우선순위가 높음 */
+
+        /* 선택자에 의한 캐스케이딩*/
+        /* style > id > class > type 순으로 우선순위가 높음*/
+        /* <h3 style="yellow" id="color" class="color">color</h3>  */
+
+        /* */
+        p {
+            width: 100%; /* 넓이, 가변값 */
+            height: 100px;/* 높이, 고정값*/
+            
+            font-size: 20px; /* 폰트 크기*/
+            font-family: Arial, Helvetica, sans-serif;/* 글꼴, 브라우져마다 지원하는 폰트가 다름, 입력순으로 적용 */
+            font-style: italic;/* 글자 기울기*/
+            font-weight: bold;/* 두깨, 100~900*/
+
+            border-style: solid ;/* 실선,  dotted 점선 */
+            border-width: 10px; 
+            border-color: red;
+            /* border: solid 10px red  이처럼 한줄로도 가능*/
+            background-color: yellow;
+            background-image: url(); /* url(이미지 경로) */
+            background-position: left; /* 공간안의 이미지의 좌표를 변경, top, bottom, center...*/
+            background-repeat: no-repect; /* 반복하지 않음, repect-x x축으로 반복, repect-y y축으로 반복*/
+            background: yellow url("img/intro/1.png") center no-repeat;
+        }
+    </style>
+</head>
+<!--  -->
+
+<body> <!-- 웹사이트의 본문 영역 -->
+    <img src="" alt="">  <!-- 이미지 삽입, src:사용할 이미지 경로, alt:이미지 출력이 안될경우 text정보로 대체 -->
+    <h1> 작은 제목</h1> <!-- heading 문서에서 가장 중요한 내용, 문서에서 한번만 사용 -->
+    <p> 본문 내용</p> <!-- paragraph 문서의 본문 내용을 담는 태그 -->
+    <ol> <!-- Unordered list 순서가 없는 리스트 생성 -->
+        <li></li> <!-- 줄바꿈 -->
+        <li></li>
+    </ol> 
+
+    <header> <!-- 웹사이트의 머리글 담는 공간 -->
+        <nav></nav><!-- navigation 메뉴버튼을 담는 공간 ul, li, a 와 함께 사용-->
+    </header>
+    
+    <main role="main"><!-- internet Explorer 에서 작동하지 않아 role로 역활 main역활설정이 필수 -->
+        <article><!-- 정보 영역-->
+            <h2> </h2> <!-- 구글 표준에서 article 안에는 h태그가 꼭 들어가야 한다.-->
+        </article> 
+    </main> 
+
+    <footer> <!-- 하단 영역 -->
+        <div> <!-- 페이지 정보, 저작권, 위치, 전화번호 설정 위치 -->
+            <p></p>
+            <p></p>
+        </div>
+    </footer>
+
+</body>
+</html>

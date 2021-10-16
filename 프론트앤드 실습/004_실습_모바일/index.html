@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <title></title>
+  
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body>
+
+  <section class="container">
+    <div class="fullBackground"></div>
+    <h2 class="caption">The future is now</h2>
+  </section>
+  
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/fullclip.js"></script>
+  <script>
+    $(".fullBackground").fullClip({
+        images: ['img/1.png', 'img/2.png', 'img/3.png'],
+        transitionTime: 1000,
+        wait: 3000
+    })
+  </script>
+
+</body>
+</html>

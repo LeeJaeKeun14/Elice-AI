@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <input id="btn" type="button" value="click" onclick="
+            console.log('event.altKey', event.altKey);
+            if(event.altKey){
+                this.style.backgroundColor = 'red';
+            } else{
+                this.style.backgroundColor = 'skyblue';
+            }
+        ">
+        <input type="button" value="click" onclick="
+            this.style.backgroundColor = 'red';
+        ">
+        <input type="text" onkeypress="
+            event.target.style.backgroundColor = 'red';
+        ">
+        <input id="btn" type="button" value="click" onclick="
+            event.style.backgroundColor = 'red';
+            event.preventDefult()
+        ">
+        <form action="" onsubmit="
+            event.preventDefault();
+            consol.log(this, event.target);
+            consol.log(event.target.title);
+        ">
+            <input type="text" name="title">
+            <input type="submit">
+        </form>
+    </body>
+</html>

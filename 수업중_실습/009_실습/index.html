@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function welcom(title_name, color){
+            article.innerHTML = '<h2>' + title_name + '</h2>Hello, WEB';
+            article.style.backgroundColor = color
+        }
+
+        function addText(text){
+            var prev_text = article.outerHTML;
+            article.innerHTML = prev_text + text;
+            
+        }
+
+        function read_template(title, body){
+            return '<h3>' + title + '</h3>' + body;   // 부품 함수는 한가지 기능만 하는게 더 범용적이다.
+        }
+
+        function read(text, body){
+            article.innerHTML = read_template(text, body);
+            /* if(text === "HTML") {
+                article.innerHTML = read_template(text, body);
+            } else if(text === "CSS") {
+                article.innerHTML = read_template(text, body);
+            } else if(text === "JS") {
+                article.innerHTML = read_template(text, body);
+            } else{
+                alert("코드오류 존재하지 않는 text 값입니다.");
+            }
+            */
+        }
+
+        var topics = [
+            {id: 1, title: "HTML", body: "안녕하세요."},
+            {id: 2, title: "CSS", body: '이 편지는 영국에서 부터 시작하여...'},
+            {id: 3, title: "JS", body: '공부하기 싫다'},
+            {id: 4, title: "test", body: '알잘딱깔센'}
+        ]
+        
+        function nav(){
+            debugger;
+            var lis = "";
+            for(var i = 0; i < topics.length; i++){
+                lis = lis + `
+                    <li><a href="${topics[i].id}.html"
+                        onclick= "
+                            event.preventDefault();
+                            read('${topics[i].title}', '${topics[i].body}');
+                            "
+                        >${topics[i].title}
+                    </a></li>`;
+            }
+            document.querySelector("nav>ul").innerHTML = lis;
+        }
+
+        function create(){
+            article.innerHTML = `
+            <h2>Create</h2>
+            <form action="https://google.com" onsubmit="
+                event.preventDefault();    
+                var title = event.target.title.value;
+                var body = event.target.body.value;
+                // topics 에 tilte, body 값으로 이루어진 객체를 추가한다. 
+                topics.push(
+                    {id:nextId, title:title, body:body}
+                )
+                nav();
+                read(nextId);
+                nextId = nextId + 1;                        
+            ">
+                <p>
+                    <input type="text" name="title" placeholder="title">
+                </p>
+                <p>
+                    <textarea name="body" placeholder="body"></textarea>
+                </p>
+                <p>
+                    <input type="submit">
+                </p>
+            </form>
+            `;
+        }
+    </script>
+
+
+    
+</head>
+<body>
+    <h1><a href="index.html" onclick="
+        event.preventDefault();
+        // alert('경고경고');
+        welcom('Welcom', 'white');
+        addText('Hi!!!!!');
+    ">WEB</a></h1>
+    <nav>
+        <ul>
+            <li><a  href="#" onclick="
+                event.preventDefault(); // 링크 이동 기능을 제거한다.
+                // welcom('HTML', 'red');
+                // read('HTML', '안녕하세요');
+            ">html</a></li>
+            <li><a  href="#" onclick="
+                event.preventDefault();
+                // welcom('CSS', 'skyblue');
+                // read('CSS', '이 편지는 영국에서 부터 시작하여...');
+            ">css</a></li>
+            <li><a href="#" onclick="
+                event.preventDefault();
+                // read('JS', '공부하기 싫다');
+            ">JS</a></li>
+        </ul>
+    </nav>
+    <article>
+        <h2>Welcom</h2>
+        Hello, WEB
+    </article>
+    <ul>
+        <li><input type="button" value="create" onclick="
+                create();
+            "></li>
+    </ul>
+    <script>
+        var article = document.querySelector("article");
+        nav();
+    </script>
+</body>
+</html>

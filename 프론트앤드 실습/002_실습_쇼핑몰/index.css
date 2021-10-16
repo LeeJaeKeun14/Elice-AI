@@ -1,0 +1,170 @@
+/* Default CSS */
+
+* {  /* 웹 페이지 여백 제거 */
+    margin: 0;
+    padding: 0;
+}
+
+img { /* 이미지의 수직 정렬을 중앙으로 바꾸는 디폴트값. 안할시 미세한 여백 발생 */
+    vertical-align: middle;
+}
+
+a { /* a 태그의 디폴트값인 밑줄 제거, 색 검정으로 수정 */
+    text-decoration: none;
+    color: #000;
+}
+
+ol, ul { /* 태그 동그라미, 숫자 기호 제거 */
+    list-style: none;
+}
+
+.container {
+    width: 960px;   /* 좌우 크기 설정 */
+    margin:0 auto;  /* 좌우는 자동으로 정렬 */
+}
+
+/* header CSS */
+#intro {
+    width: 100%;
+    height: 80px;
+    background-color: yellow;
+}
+
+#intro h1 {
+    float: left;
+
+    width: 50%;
+    height: 80px;
+    background-color: #fbfbfb;
+}
+
+#intro h1 a { /* a 태그이므로 block 설정 */
+    display: block;
+    
+    padding: 22px 0 0 30px;
+    font-size: 30px;
+}
+
+#intro nav { /* nav는 링크 설정을 할 시 사용하는 태그 */
+    float: right;
+
+    width: 50%;
+    height: 80px;
+    background-color: pink;
+}
+
+#intro nav ul li {
+    width: 33.33333%;
+    height: 80px;
+    
+    /* display: inline-block;*/
+    float: left;
+    
+    text-align: center; /* 텍스트를 x축 기준 가운데 정렬 */
+    line-height: 80px;  /* 글자간 간격을 80px로 고정. == 위 아래 가운데 정렬, height와 값을 동일시 해야함 */
+}
+
+#intro nav ul li.one { /* li .one 으로할 시 li의 자식 노드중 .one클래스 탐색 */
+    background-color: #efeff6;
+}
+
+#intro nav ul li.two {
+    background-color: #dcdcec;
+}
+
+#intro nav ul li.three {
+    background-color: #cbcae3;
+}
+
+#intro nav ul li a {
+    font-size: 20px; font-weight: bold;
+}
+
+
+/* Main CSS */
+#main article {
+    width: 50%;
+    height: 320px;
+    
+    float: left;
+}
+
+#main article a {
+    display: block; 
+    
+    width: 100%;
+    height: 100%;
+}
+
+#main article.one {
+    background-color: #532fa1;
+}
+
+#main article.two {
+    background-color: #a44789;
+}
+
+#main article.three {
+    background-color: #3ab6bc;
+}
+
+#main article img { 
+    width: 100%; /* 높이는 이미지 비율에 자동 설정 */
+}
+
+#main article h2 {
+    color: #fff;
+    font-size: 25px;
+    
+    text-align: center;
+    padding: 10px 0;
+}
+
+#main article.text {
+    width: 100%;
+    height: 66px;
+}
+
+#main article.text p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    
+    padding: 20px 0; /* padding: 상하, 좌우 */
+    
+    border: solid 1px #000;
+}
+
+#footer { /* 위 태그에서 float를 사용했으니 clear 사용 */
+    clear: both;
+    
+    width: 100%;
+    height: 80px;
+    background-color: #f9f9f9;
+}
+
+#footer .copyright{
+    float:left;
+    width: 50%;
+    height: 100px;
+}
+
+#footer .copyright p{
+    font-size: 14px;
+    color: #999;
+    padding: 32px 0 0 40px;
+}
+
+#footer .address{
+    float:right;
+    width: 50%;
+    height: 100px;
+}
+
+#footer .address p{
+    font-size: 14px;
+    color: #999;
+    padding: 32px 40px 0 0;
+    
+    text-align: right;
+}
