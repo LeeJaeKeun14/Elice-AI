@@ -7,7 +7,7 @@
    2. 수업실습
 2. 자료구조
    1. 수업공부
-   2. 스터디
+   2. 스터디 : [gitlab으로 이민갔음](https://kdt-gitlab.elice.io/elicecodingstudy2/jaekeun-lee)
    3. 코드
 3. 백엔드
 4. 데이터분석
