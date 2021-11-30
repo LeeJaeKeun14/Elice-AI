@@ -1,0 +1,55 @@
+<script>
+    function deselect1(e) {
+        e.preventDefault(); 
+        $("input[name='name_sort']").prop('checked', false);
+        $("input[name=num_" + name_sort + "]").val("");
+        num_reset(name_sort)
+        name_sort = 5
+    }
+</script>
+
+<script>
+    function num_reset(num) {
+        var name_value = $("input[name=num_" + name_sort + "]").val()
+        var evaluatiohn_value = $("input[name=num_" + evaluation_sort + "]").val()
+        var time_value = $("input[name=num_" + time_sort + "]").val()
+        if (name_sort != 5 && name_sort > num) {
+            name_sort -= 1
+            $("input[name=num_" + name_sort + "]").val(name_value);
+        }
+        if (evaluation_sort != 5 && evaluation_sort > num) {
+            evaluation_sort -= 1
+            $("input[name=num_" + evaluation_sort + "]").val(evaluatiohn_value);
+        }
+        if (time_sort != 5 && time_sort > num) {
+            time_sort -= 1
+            $("input[name=num_" + time_sort + "]").val(time_value);
+        }
+        if (num != 5) {
+            last_num -= 1
+        }
+        $("input[name=num_" + last_num + "]").val("");
+        $("input[name=num_" + last_num + "]").prop("type", "hidden");   
+    }
+</script>
+
+<script>
+    // 라디오버튼 클릭시 이벤트 발생
+    var name_sort = 5
+    var evaluation_sort = 5
+    var time_sort = 5
+
+    var last_num = 1
+    $("input:radio[name=name_sort]").click(function(){
+        if (name_sort == 5){
+            name_sort = last_num
+            last_num += 1
+            $("input[name=num_" + name_sort + "]").prop("type", "text");
+        }
+        if($("input[name=name_sort]:checked").val() == "높은순"){
+            $("input[name=num_" + name_sort + "]").val("이름:높은순");
+        } else if ($("input[name=name_sort]:checked").val() == "낮은순") {
+            $("input[name=num_" + name_sort + "]").val("이름:낮은순");
+        }
+    });
+</script>
