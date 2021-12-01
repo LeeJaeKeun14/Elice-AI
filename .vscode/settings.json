@@ -1,4 +1,8 @@
 {
     "pasteImage.path": "${currentFileDir}/image",
-    "pasteImage.defaultName": "00"
+    "pasteImage.defaultName": "00",
+
+    "python.autoComplete.extraPaths": [
+        "C:\\Users\\ljkea\\anaconda3\\python.exe"
+    ]
 }
