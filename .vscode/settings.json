@@ -4,5 +4,8 @@
 
     "python.autoComplete.extraPaths": [
         "C:\\Users\\ljkea\\anaconda3\\python.exe"
+    ],
+    "python.analysis.extraPaths": [
+        "C:\\Users\\ljkea\\anaconda3\\python.exe"
     ]
 }
