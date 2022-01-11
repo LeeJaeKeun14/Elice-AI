@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'Calluna';
+    src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/CallunaSansRegular.otf") format("opentype");
+}
+* {
+box-sizing: border-box;
+}
+
+body {
+    font-family: Calluna, Arial, sans-serif;
+    padding: 1rem;
+    padding-top: 45%;
+    color: #fff;
+    background-color: #303030;
+}
+
+#img_main {
+    height: 500px;
+    background: url('./img/배경사진_메인.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% !important;
+    background-position: center center !important;
+}
+
+#img_2 {
+    height: 500px;
+    background: url('./img/배경사진_코로나.jfif');
+    background-repeat: no-repeat;
+    background-size: 100% !important;
+    background-position: center center !important;
+}
+
+#img_container {
+    display: flex;
+    padding: 0 10%;
+    /* background-color: #ffffff; */
+}
+
+.fade_out {
+    width: 50%;
+    position: relative;
+    font-family: Calluna, Arial, sans-serif;
+    background: -webkit-linear-gradient(rgba(30, 30, 30, 0), rgba(30, 30, 30, 0)), url("./img/코로나_지도_2020.png");
+    background: linear-gradient(rgba(30, 30, 30, 0), rgba(30, 30, 30, 0)), url("./img/코로나_지도_2020.png");
+    background-repeat: no-repeat;
+    background-size: 100% !important;
+    background-position: right center !important;
+}
+
+#img_3 {
+    height: 500px;
+    background: url('./img/배경사진_언택트시대.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% !important;
+    background-position: center center !important;
+}
+#img_4 {
+    height: 500px;
+    background: url('./img/배경사진_ott플랫폼.jfif');
+    background-repeat: no-repeat;
+    background-size: 100% !important;
+    background-position: center center !important;
+}
+#img_5 {
+    height: 500px;
+    background: url('./img/오징어게임.png');
+    background-repeat: no-repeat;
+    background-size: 100% !important;
+    background-position: center center !important;
+}
+
+h1 {~
+font-size: 4rem;
+text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+line-height: 1;
+position: absolute;
+top: 10px;
+font-weight: 100;
+}
+
+p {
+font-size: 1.3rem;
+text-align: left;
+line-height: 1.6;
+margin-left: 8rem;
+margin-right: 8rem;
+color: #fff;
+}
+
+h2 {
+text-align: center;
+text-transform: uppercase;
+margin-bottom: 0;
+}
+
+span {
+display: block;
+margin: 0;
+text-align: center;
+font-size: 3rem;
+}
